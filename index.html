@@ -1,4 +1,58 @@
+
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>Number Guessing Game</h1>
+
+        <p class="description">
+            I'm thinking of a number between 1 and 100.
+        </p>
+
+        <div class="input-area">
+
+            <input
+                type="number"
+                id="guessInput"
+                placeholder="Enter your guess"
+            >
+
+            <button id="guessButton" hidden>
+                Guess
+            </button>
+
+        </div>
+
+        <p id="message"></p>
+
+        <p id="attemptsElement">
+            Attempts: 0
+        </p>
+
+        <button id="newGameBtn" hidden>
+            New Game
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,14 +62,18 @@
 </head>
 <body>
     <h1>Number Guessing Game</h1>
-    <p>I'm thinking of a number between 1 and 100</p>
-    <input type="number" id="guessInput" placeholder="Enter your guess">
-    <button id="guessButton">Guess</button>
+    <p class="description">I'm thinking of a number between 1 and 100</p>
+    <div class="input-area">
+        <input type="number" id="guessInput" placeholder="Enter your guess">
+        <button id="guessButton">Guess</button>
+    </div>
+    
     <p id="message"></p>
-    <p id="attemptsElement"></p>
-    <button id="newGameBtn">New Game</button>
+    <p id="attemptsElement">Attempts: 0</p>
+    <button id="newGameBtn" hidden>New Game</button>
     
 
     <script src="script.js"></script>
 </body>
-</html>
+</html> -->
+

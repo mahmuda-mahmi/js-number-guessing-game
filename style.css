@@ -1,23 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: Arial, sans-serif;
+
+    background: #111827;
+    color: #f9fafb;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 500px;
+
+    padding: 40px;
+
+    background: #1f2937;
+    border-radius: 16px;
+
     text-align: center;
-    margin-top: 50px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.description {
+    margin-bottom: 30px;
+    color: #9ca3af;
+    line-height: 1.5;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 input {
-    padding: 10px;
-    width: 100px;
+    width: 180px;
+    padding: 12px 15px;
+
+    border: 2px solid #374151;
+    border-radius: 8px;
+
+    background: #111827;
+    color: white;
+
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #6366f1;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #6366f1;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
     cursor: pointer;
-    border: 1px solid #cccccc;
-    color: #312d2d;
-    background-color: #ffffff;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #4f46e5;
+    transform: translateY(-1px);
 }
 
 #message {
-    font-size: 20px;
+    min-height: 30px;
+    margin: 20px 0;
+
+    font-size: 18px;
     font-weight: bold;
+}
+
+#attemptsElement {
+    margin-bottom: 20px;
+    color: #9ca3af;
+}
+
+#newGameBtn{
+    background: #374151;
+}
+
+#newGameBtn:hover {
+    background: #4b5563;
 }

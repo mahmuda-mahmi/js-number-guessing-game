@@ -4,8 +4,19 @@ console.log(secretNumber); // For testing purposes, you can remove this line in 
 const guessInput = document.getElementById("guessInput");
 const guessButton = document.getElementById("guessButton");
 const message = document.getElementById("message");
+const newGameButton = document.getElementById("newGameBtn");
 const attemptsElement = document.getElementById("attemptsElement");
 let attempts = 0;
+guessButton.hidden = false;
+
+newGameButton.addEventListener("click", () => {
+    secretNumber = Math.floor(Math.random() * 100) + 1;
+    attempts = 0;
+    guessInput.value = "";
+    message.textContent = "";
+    attemptsElement.textContent = `Attempts: ${attempts}`;
+    newGameButton.hidden = true;
+});
 
 guessButton.addEventListener("click", () => { 
     const guess = Number(guessInput.value);
@@ -22,8 +33,11 @@ guessButton.addEventListener("click", () => {
         }
         else {
           message.textContent = "Congratulations! You guessed the number!";
+          guessButton.disabled = true;
         }
-    attempts++;
+        guessInput.value = "";
+        attempts++;
+        newGameButton.hidden = false;
     }
     attemptsElement.textContent = `Attempts: ${attempts}`;
 });
